@@ -8,13 +8,76 @@
   <meta name="description" content="Cortijo El Encanto - Alquiler rural en Berja, Almería. Disfruta de una experiencia única en la naturaleza con todas las comodidades. Reserva ahora." />
   <meta name="keywords" content="cortijo en Berja, alquiler rural Almería, casa rural Berja, escapada rural, cortijo con piscina, vacaciones en la naturaleza" />
   <title>Cortijo El Encanto | Alquiler Rural en Berja</title>
-  <link rel="icon" href="Logo.png" type="image/png"> <!-- AÑADIDO favicon -->
+  <link rel="icon" href="logo.png" type="image/png"> <!-- AÑADIDO favicon -->
 
   <!-- Tipografías y Estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <style>
+    @media (max-width: 768px) {
+  header {
+    padding: 4rem 1rem;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+
+  .logo-img {
+    width: 60px;
+    top: 15px;
+    left: 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+  }
+
+  nav a {
+    margin: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .precio-box, .info-box {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  iframe {
+    height: 250px;
+  }
+
+  .reserva-modal .modal-content {
+    width: 90%;
+    padding: 1.5rem 1rem;
+  }
+}
+
+
     :root {
       --color-primario: #7A5C41;
       --color-secundario: #FDF6EF;
@@ -196,7 +259,7 @@
 </head>
 <body>
   <header class="animate__animated animate__fadeInDown">
-    <img src="Logo.png" alt="Logo del cortijo" class="logo-img"> <!-- AÑADIDO -->
+    <img src="logo.png" alt="Logo del cortijo" class="logo-img"> <!-- AÑADIDO -->
     <h1>Cortijo El Encanto</h1>
     <p>Tu refugio natural en Berja, Almería</p>
   </header>
