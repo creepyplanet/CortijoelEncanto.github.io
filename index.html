@@ -1,0 +1,285 @@
+<!-- Cambios añadidos están comentados con <-- AÑADIDO -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cortijo El Encanto - Alquiler rural en Berja, Almería. Disfruta de una experiencia única en la naturaleza con todas las comodidades. Reserva ahora." />
+  <meta name="keywords" content="cortijo en Berja, alquiler rural Almería, casa rural Berja, escapada rural, cortijo con piscina, vacaciones en la naturaleza" />
+  <title>Cortijo El Encanto | Alquiler Rural en Berja</title>
+  <link rel="icon" href="logo.png" type="image/png"> <!-- AÑADIDO favicon -->
+
+  <!-- Tipografías y Estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <style>
+    :root {
+      --color-primario: #7A5C41;
+      --color-secundario: #FDF6EF;
+      --color-texto: #3B3B3B;
+      --color-acento: #B98C55;
+      --fondo-suave: #FAEFE7;
+      --sombra: 0 4px 12px rgba(0,0,0,0.1);
+      --radio: 14px;
+    }
+
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--color-secundario);
+      color: var(--color-texto);
+    }
+
+    html {
+      scroll-behavior: smooth; /* scroll suave */
+    }
+
+    section {
+      scroll-margin-top: 100px; /* compensa la altura del nav para que no se oculte */
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x800/?andalusia,house') center/cover no-repeat;
+      color: white;
+      padding: 7rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo-img { /* AÑADIDO estilo para el logo */
+      width: 80px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      border-radius: var(--radio);
+      background: rgba(255,255,255,0.8);
+      padding: 5px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.4rem;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      box-shadow: var(--sombra);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: var(--color-primario);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--color-acento);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--color-primario);
+      margin-bottom: 1rem;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: var(--radio);
+      box-shadow: var(--sombra);
+    }
+
+    .precio-box, .info-box {
+      background: var(--fondo-suave);
+      border-left: 5px solid var(--color-primario);
+      padding: 1.5rem;
+      border-radius: var(--radio);
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      background: var(--color-acento);
+      color: white;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: var(--radio);
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      display: inline-block;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #a37349;
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: var(--radio);
+      box-shadow: var(--sombra);
+    }
+
+    footer {
+      background: #eee2d5;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .reserva-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .reserva-modal .modal-content {
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: var(--radio);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--sombra);
+      position: relative;
+    }
+
+    .close-btn {
+      float: right;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header class="animate__animated animate__fadeInDown">
+    <img src="logo.png" alt="Logo del cortijo" class="logo-img"> <!-- AÑADIDO -->
+    <h1>Cortijo El Encanto</h1>
+    <p>Tu refugio natural en Berja, Almería</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#fotos">Fotos</a>
+    <a href="#precios">Precios</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="fotos">
+      <h2>Galería de Fotos</h2>
+      <div class="galeria">
+        <img src="1.jpg" alt="Exterior del cortijo">
+        <img src="2.jpg" alt="Interior cálido">
+        <img src="3.jpg" alt="Piscina al aire libre">
+      </div>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre el Cortijo</h2>
+      <div class="info-box">
+        Situado a solo 5 minutos del Ayuntamiento de Berja, <strong>Cortijo El Encanto</strong> es un alojamiento rural con encanto, ideal para desconectar. <br><br>
+        🛏️ <strong>6 camas</strong><br>
+        🚿 <strong>4 baños</strong><br>
+        🏊 <strong>Piscina privada</strong><br>
+        🚗 <strong>Espacio para 6 coches</strong><br>
+        🌄 Vistas a la Sierra de Gádor, cocina equipada, chimenea y barbacoa.
+      </div>
+    </section>
+
+    <section id="ubicacion">
+      <h2>Ubicación</h2>
+      <p>Nos encontramos en Berja (Almería), rodeados de naturaleza y a un paso del centro.</p>
+      <iframe src="https://maps.google.com/maps?q=Berja&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+    </section>
+
+    <section id="precios">
+      <h2>Precios y Reservas</h2>
+      <div class="precio-box">
+        <strong>Desde 120€/noche</strong><br>
+        Tarifa especial para fines de semana largos, eventos y estancias prolongadas. ¡Consúltanos!
+      </div>
+      <button class="btn" onclick="abrirReserva()">Reservar Ahora</button>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto Directo</h2>
+      <div class="info-box">
+        📞 Teléfono/WhatsApp: <a href="tel:+34672076446">+34 672 076 446</a><br>
+        📧 Email: <a href="mailto:reservas@cortijoencanto.com">reservas@cortijoencanto.com</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Cortijo El Encanto - Alquiler rural en Berja | Todos los derechos reservados
+  </footer>
+
+  <!-- Modal Reserva -->
+  <div class="reserva-modal" id="modal">
+    <div class="modal-content animate__animated animate__zoomIn">
+      <span class="close-btn" onclick="cerrarReserva()">&times;</span>
+      <h3>¿Quieres reservar?</h3>
+      <p>Contáctanos por WhatsApp o envíanos un correo con tus fechas preferidas.</p>
+      <a class="btn" href="https://wa.me/34672076446?text=Hola%2C+quiero+reservar+el+Cortijo+El+Encanto" target="_blank">Reservar por WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    function abrirReserva() {
+      document.getElementById('modal').style.display = 'flex';
+    }
+    function cerrarReserva() {
+      document.getElementById('modal').style.display = 'none';
+    }
+    window.addEventListener('click', function(e) {
+      if (e.target === document.getElementById('modal')) cerrarReserva();
+    });
+  </script>
+</body>
+</html>
