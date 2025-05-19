@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Cortijo El Encanto - Alquiler rural en Berja, Almería. Disfruta de una experiencia única en la naturaleza con todas las comodidades. Reserva ahora." />
   <meta name="keywords" content="cortijo en Berja, alquiler rural Almería, casa rural Berja, escapada rural, cortijo con piscina, vacaciones en la naturaleza" />
-  <meta name="google-site-verification" content="0HXQMioVcPsikxNc44nSQ3s4Xfyrq3ulWsCSjGQQD6s" />
   <title>Cortijo El Encanto | Alquiler Rural en Berja</title>
   <link rel="icon" href="logo.png" type="image/png"> <!-- AÑADIDO favicon -->
 
@@ -142,17 +141,20 @@
       z-index: 1000;
     }
 
-    nav a {
-      margin: 0 1rem;
-      color: var(--color-primario);
-      text-decoration: none;
-      font-weight: bold;
-    }
+nav a {
+  margin: 0 1rem;
+  color: var(--color-primario);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radio);
+  transition: background-color 0.3s ease;
+}
 
-    nav a:hover {
-      color: var(--color-acento);
-    }
-
+nav a:hover {
+  background-color: var(--color-acento);
+  color: var(--color-primario);
+}
     .container {
       max-width: 1200px;
       margin: auto;
@@ -254,14 +256,90 @@
       font-size: 1.2rem;
       cursor: pointer;
     }
+    .experiencia-card {
+  background: white;
+  border: 1px solid #e8dfd8;
+  border-left: 5px solid var(--color-acento);
+  border-radius: var(--radio);
+  padding: 1.5rem 1.8rem;
+  box-shadow: var(--sombra);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experiencia-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.experiencia-card h3 {
+  margin-bottom: 1rem;
+  color: var(--color-primario);
+}
+
+.experiencia-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.experiencia-card ul li {
+  padding-left: 1.2rem;
+  position: relative;
+  margin-bottom: 0.6rem;
+  color: #444;
+}
+
+.experiencia-card ul li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.9rem;
+  color: var(--color-acento);
+}
+ .cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fffaf4;
+  border-left: 5px solid var(--color-acento);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 1.3rem 1.4rem;
+  font-size: 1.05rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+
   </style>
 </head>
 <body>
-  <header class="animate__animated animate__fadeInDown">
-    <img src="logo.png" alt="Logo del cortijo" class="logo-img"> <!-- AÑADIDO -->
-    <h1>Cortijo El Encanto</h1>
-    <p>Tu refugio natural en Berja, Almería</p>
-  </header>
+<header class="animate__animated animate__fadeInDown">
+  <img src="logo.png" alt="Logo del cortijo" class="logo-img">
+  <h1>Cortijo El Encanto</h1>
+  <p>Tu refugio natural en Berja, Almería</p>
+  <a href="#experiencia" class="btn" style="
+    background: linear-gradient(to right, var(--color-acento), var(--color-primario));
+    border: none;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    padding: 0.9rem 2rem;
+    border-radius: var(--radio);
+    text-decoration: none;
+    color: white;
+    box-shadow: var(--sombra);
+    display: inline-block;
+    transition: background 0.3s ease;
+  ">Descubre la experiencia</a>
+</header>
 
   <nav>
     <a href="#sobre">Sobre</a>
@@ -282,31 +360,116 @@
       </div>
     </section>
 
-    <!-- AÑADIDO nueva sección sobre Berja -->
-    <section id="sobre-berja"> <!-- AÑADIDO/ACTUALIZADO -->
-     <h2>Descubre Berja</h2>
-      <div class="info-box">
-        Berja es un encantador pueblo andaluz situado entre montañas y cercano al mar. Su casco histórico ofrece calles con historia, plazas llenas de vida y fuentes emblemáticas como la Fuente del Oro o la de los 16 Caños, perfectas para pasear y desconectar.
+<section id="experiencia">
+  <h2>Vive la experiencia completa</h2>
 
-        Desde el cortijo podrás acceder fácilmente a rutas por la Sierra de Gádor, ideales para caminar, respirar aire puro o simplemente contemplar las vistas. Y si te apetece un plan de costa, en menos de media hora puedes llegar a playas tranquilas como Balanegra o Guardias Viejas.
+  <!-- Intro encantadora -->
+  <div class="info-box" style="background: #fffaf4; border-left: 5px solid var(--color-acento); font-size: 1.15rem; padding: 2rem;">
+    <p>🌿 Despierta con el canto de los pájaros, desayuna al sol junto a un olivo centenario, relájate en la piscina y cena bajo las estrellas junto a un horno de leña encendido. <strong>Eso es El Encanto.</strong></p>
+  </div>
 
-        La gastronomía local, con sus tapas y productos tradicionales, y el ambiente relajado del pueblo hacen de Berja un lugar perfecto para descansar, explorar y vivir una experiencia auténtica.
-      </div>
-    </section>
+  <!-- Características destacadas -->
+  <div class="galeria" style="margin-top: 2rem;">
+    <div class="info-box experiencia-card">
+      <h3>🏡 Comodidad Rural</h3>
+      <ul>
+        <li>3 habitaciones amplias y luminosas</li>
+        <li>Capacidad para hasta 8 personas</li>
+        <li>Internet de alta velocidad</li>
+        <li>Horno de leña auténtico</li>
+        <li>Ambiente rústico con alma</li>
+      </ul>
+    </div>
+    <div class="info-box experiencia-card">
+      <h3>🌄 Naturaleza Viva</h3>
+      <ul>
+        <li>Piscina privada con vistas a la sierra</li>
+        <li>Olivos, frutales y gallinas</li>
+        <li>Noches frescas incluso en verano</li>
+        <li>Senderos, rutas y paseos tranquilos</li>
+        <li>Paz sin renunciar al confort</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Localización destacada -->
+  <div class="info-box experiencia-card" style="margin-top: 2rem;">
+    <h3>📍 Berja: entre la sierra y el mar</h3>
+    <p>A medio camino entre la montaña y el Mediterráneo.</p>
+    <ul>
+      <li>15 km de la costa (Balanegra, Almerimar, Adra)</li>
+      <li>25 km de la Alpujarra almeriense</li>
+      <li>45 min del aeropuerto de Almería</li>
+    </ul>
+  </div>
+
+  <!-- Experiencias temáticas -->
+  <div class="galeria" style="margin-top: 2rem;">
+    <div class="info-box experiencia-card">
+      <h3>🕰 Historia viva</h3>
+      <ul>
+        <li>Ruinas romanas, arquitectura musulmana</li>
+        <li>Iglesias del siglo XVI y molinos</li>
+        <li>Paseo histórico por el casco urbano</li>
+      </ul>
+    </div>
+    <div class="info-box experiencia-card">
+      <h3>🍷 Sabores de la tierra</h3>
+      <ul>
+        <li>Migas, puchero y potajes</li>
+        <li>Vinos de la Contraviesa</li>
+        <li>Tapas caseras y mercados de verdad</li>
+      </ul>
+    </div>
+    <div class="info-box experiencia-card">
+      <h3>🎉 Fiestas con alma</h3>
+      <ul>
+        <li>Virgen de Gádor en septiembre</li>
+        <li>Romerías, verbenas y tradiciones</li>
+        <li>Ambiente alegre y cercano</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Cierre emocional -->
+  <div class="info-box" style="background: #fff7f0; margin-top: 2rem; font-size: 1.1rem; padding: 2rem;">
+    <h3>🌙 Desconecta. Reconecta.</h3>
+    <p>Desde tu cortijo en Berja, tienes la sierra, el mar, la historia... pero sobre todo, <strong>la tranquilidad que buscabas.</strong> Ideal para familias, parejas o escapadas de slow tourism.</p>
+  </div>
+</section>
 
 
 
-    <section id="sobre">
-      <h2>Sobre el Cortijo</h2>
-      <div class="info-box">
-        Situado a solo 5 minutos del Ayuntamiento de Berja, <strong>Cortijo El Encanto</strong> es un alojamiento rural con encanto, ideal para desconectar. <br><br>
-        🛏️ <strong>6 camas</strong><br>
-        🚿 <strong>4 baños</strong><br>
-        🏊 <strong>Piscina privada</strong><br>
-        🚗 <strong>Espacio para 6 coches</strong><br>
-        🌄 Vistas a la Sierra de Gádor, cocina equipada, chimenea y barbacoa.
-      </div>
-    </section>
+
+
+
+   <section id="sobre">
+  <h2>Sobre el Cortijo</h2>
+
+  <div class="cards-container">
+    <div class="card"><strong>3 dormitorios</strong><br>Amplios, con luz natural y estilo rústico.</div>
+    <div class="card"><strong>Capacidad para 8 personas</strong><br>Perfecto para familias o grupos de amigos.</div>
+    <div class="card"><strong>Piscina privada</strong><br>Con vistas despejadas a la sierra.</div>
+    <div class="card"><strong>Espacio para 6 coches</strong><br>Amplio acceso y fácil aparcamiento.</div>
+    <div class="card"><strong>Internet de alta velocidad</strong><br>Ideal también para teletrabajo.</div>
+    <div class="card"><strong>Cocina equipada</strong><br>Horno, lavavajillas, nevera y más.</div>
+    <div class="card"><strong>Chimenea + horno de leña</strong><br>Perfecto para el invierno y cenas especiales.</div>
+    <div class="card"><strong>Zona barbacoa exterior</strong><br>Comidas al aire libre con sabor.</div>
+    <div class="card"><strong>Gallineros con animales</strong><br>Toque rural para pequeños y grandes.</div>
+    <div class="card"><strong>Olivos y frutales</strong><br>Entorno natural y auténtico.</div>
+    <div class="card"><strong>Clima suave todo el año</strong><br>Inviernos templados y veranos agradables.</div>
+    <div class="card"><strong>Vistas a la Sierra de Gádor</strong><br>Atardeceres inolvidables.</div>
+    <div class="card"><strong>Paz, privacidad y naturaleza</strong><br>Desconexión total sin renunciar al confort.</div>
+  </div>
+
+  <div class="info-box" style="margin-top: 2rem; background: #fff7f0;">
+    <p style="font-size: 1.1rem;">
+      <strong>Un espacio perfecto</strong> para familias, grupos de amigos o parejas que buscan tranquilidad, autenticidad y comodidad sin renunciar a nada. 
+      Ven a vivir <strong>la experiencia de un cortijo andaluz con alma.</strong>
+    </p>
+  </div>
+</section>
+
 
     <section id="ubicacion">
       <h2>Ubicación</h2>
