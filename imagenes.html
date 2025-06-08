@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería - Cortijo El Encanto</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primario: #7A5C41;
+      --color-acento: #B98C55;
+      --fondo: #FDF6EF;
+      --sombra: 0 4px 12px rgba(0,0,0,0.1);
+      --radio: 14px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--fondo);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--color-primario);
+      color: white;
+      text-align: center;
+      padding: 2.5rem 1rem;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .grid img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radio);
+      box-shadow: var(--sombra);
+      transition: transform 0.3s ease;
+    }
+
+    .grid img:hover {
+      transform: scale(1.03);
+    }
+
+    .volver {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .volver a {
+      background: var(--color-acento);
+      color: white;
+      text-decoration: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: var(--radio);
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .volver a:hover {
+      background: #a37249;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Galería Fotográfica</h1>
+    <p>Descubre cada rincón de Cortijo El Encanto</p>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      <img src="images/foto1.JPG" alt="Vista del cortijo" />
+      <img src="images/foto2.JPG" alt="Salón interior" />
+      <img src="images/foto3.JPG" alt="Zona de la piscina" />
+      <img src="images/foto4.JPG" alt="Terraza con vistas" />
+      <img src="images/foto5.JPG" alt="Dormitorio rústico" />
+      <img src="images/foto6.JPG" alt="Entrada principal" />
+      <img src="images/foto7.JPG" alt="Vista del cortijo" />
+      <img src="images/foto8.JPG" alt="Salón interior" />
+      <img src="images/foto9.JPG" alt="Zona de la piscina" />
+      <img src="images/foto10.JPG" alt="Terraza con vistas" />
+      <img src="images/foto11.JPG" alt="Dormitorio rústico" />
+      <img src="images/foto12.JPG" alt="Entrada principal" />
+      <img src="images/foto13.JPG" alt="Vista del cortijo" />
+      <img src="images/foto14.JPG" alt="Salón interior" />
+      <img src="images/foto15.JPG" alt="Zona de la piscina" />
+      <img src="images/foto16.JPG" alt="Terraza con vistas" />
+      <img src="images/foto17.JPG" alt="Dormitorio rústico" />
+      <img src="images/foto18.JPG" alt="Entrada principal" />
+      <img src="images/foto19.JPG" alt="Vista del cortijo" />
+      <img src="images/foto20.JPG" alt="Salón interior" />
+      <img src="images/foto21.JPG" alt="Zona de la piscina" />
+      <img src="images/foto22.JPG" alt="Terraza con vistas" />
+      <img src="images/foto23.JPG" alt="Dormitorio rústico" />
+      <img src="images/foto24.JPG" alt="Entrada principal" />
+      <img src="images/foto25.JPG" alt="Entrada principal" />
+      <img src="images/foto26.JPG" alt="Vista del cortijo" />
+      <img src="images/foto27.JPG" alt="Salón interior" />
+      <img src="images/foto28.JPG" alt="Zona de la piscina" />
+      <img src="images/foto29.JPG" alt="Terraza con vistas" />
+      <img src="images/foto30.JPG" alt="Dormitorio rústico" />
+      <img src="images/foto31.JPG" alt="Entrada principal" />
+      <img src="images/foto32.JPG" alt="Vista del cortijo" />
+      <img src="images/foto33.JPG" alt="Salón interior" />
+      <img src="images/foto34.JPG" alt="Zona de la piscina" />
+      <img src="images/foto35.JPG" alt="Terraza con vistas" />
+      <img src="images/foto36.JPG" alt="Dormitorio rústico" />
+      <img src="images/foto37.JPG" alt="Entrada principal" />
+      <img src="images/foto38.JPG" alt="Vista del cortijo" />
+      <img src="images/foto39.JPG" alt="Salón interior" />
+      <img src="images/foto40.JPG" alt="Zona de la piscina" />
+      <img src="images/foto41.JPG" alt="Terraza con vistas" />
+      <img src="images/foto42.JPG" alt="Dormitorio rústico" />
+      <img src="images/foto43.JPG" alt="Entrada principal" />
+      <img src="images/foto44.JPG" alt="Vista del cortijo" />
+      <img src="images/foto45.JPG" alt="Salón interior" />
+      <img src="images/foto46.JPG" alt="Zona de la piscina" />
+      <img src="images/foto47.JPG" alt="Terraza con vistas" />
+      <img src="images/foto48.JPG" alt="Dormitorio rústico" />
+      <img src="images/foto49.JPG" alt="Entrada principal" />
+      <img src="images/foto50.JPG" alt="Entrada principal" />
+      <img src="images/foto51.JPG" alt="Vista del cortijo" />
+      <img src="images/foto52.JPG" alt="Salón interior" />
+      <img src="images/foto53.JPG" alt="Zona de la piscina" />
+      <img src="images/foto54.JPG" alt="Terraza con vistas" />
+      <img src="images/foto55.JPG" alt="Dormitorio rústico" />
+      <img src="images/foto56.JPG" alt="Entrada principal" />
+      <img src="images/foto57.JPG" alt="Vista del cortijo" />
+      <img src="images/foto58.JPG" alt="Salón interior" />
+      <img src="images/foto59.JPG" alt="Zona de la piscina" />
+      <img src="images/foto60.JPG" alt="Terraza con vistas" />
+      <img src="images/foto61.JPG" alt="Dormitorio rústico" />
+      <!-- Puedes seguir añadiendo más imágenes -->
+    </div>
+
+    <div class="volver">
+      <a href="index.html">← Volver al inicio</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Cortijo El Encanto. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
